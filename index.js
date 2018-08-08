@@ -1,8 +1,11 @@
 var katzDeliLine = [];
-
-function takeANumber(katzDeliLine, name) { 
-  katzDeliLine.push(name)
-  return  `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+ var x = 0
+function takeANumber(katzDeliLine) { 
+  // var x = 0
+ // while (x <= 0, x++) //
+  x++
+  katzDeliLine.push(x)
+  return  `welcome, you are # ${x}. You are number ${katzDeliLine.length} in line.`
 }
 
 
@@ -15,12 +18,12 @@ function nowServing(katzDeliLine){
 
 function currentLine(kazDeliLine) {
   var x = []
-  if (kazDeliLine.length > 0)
-  for (let z = 0; z < kazDeliLine.length ; z++){
-  x.push(`${z+1}. ${kazDeliLine[z]}`)
-  }
-  else { 
+  if (kazDeliLine.length > 0){
+    for (let z = 0; z < kazDeliLine.length ; z++){
+      x.push(`${z+1}. ${kazDeliLine[z]}`)
+    }
+      return ('The line is currently: '  +  x.join(", ") )
+  }else { 
     return 'The line is currently empty.'
   }
-  return ('The line is currently: '  +  x.join(", ") )
 }
